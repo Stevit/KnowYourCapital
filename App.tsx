@@ -80,7 +80,7 @@ const App: React.FC = () => {
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");
     link.setAttribute("href", encodedUri);
-    link.setAttribute("download", `dati_proiezione_${new Date().toISOString().slice(0,10)}.csv`);
+    link.setAttribute("download", `know_your_capital_data_${new Date().toISOString().slice(0,10)}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -99,7 +99,7 @@ const App: React.FC = () => {
     // Calcolo anno libertà finanziaria
     const freedomData = chartData.find(d => (d.netGrowth / 12) >= targetMonthlyIncome);
 
-    let content = `REPORT DESCRITTIVO SCENARIO FINANZIARIO\n`;
+    let content = `KNOW YOUR CAPITAL - REPORT SCENARIO\n`;
     content += `Generato il: ${new Date().toLocaleDateString()}\n`;
     content += `========================================\n\n`;
 
@@ -182,7 +182,7 @@ const App: React.FC = () => {
     const element = document.createElement("a");
     const file = new Blob([content], {type: 'text/plain'});
     element.href = URL.createObjectURL(file);
-    element.download = `report_scenario_${new Date().toISOString().slice(0,10)}.txt`;
+    element.download = `know_your_capital_report_${new Date().toISOString().slice(0,10)}.txt`;
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -205,7 +205,7 @@ const App: React.FC = () => {
               <Calculator size={20} />
             </div>
             <div>
-                <h1 className="text-lg font-bold text-slate-800 leading-tight">Simulatore Finanziario</h1>
+                <h1 className="text-lg font-bold text-slate-800 leading-tight">Know Your Capital</h1>
                 <p className="text-[10px] text-slate-500 font-medium uppercase tracking-wider">Pro Edition</p>
             </div>
           </div>
