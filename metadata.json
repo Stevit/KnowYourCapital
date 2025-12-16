@@ -1,0 +1,5 @@
+{
+  "name": "Simulatore Finanziario Pro",
+  "description": "Strumento interattivo per la proiezione del portafoglio di investimenti con gestione di flussi di cassa, tasse e rendimenti composti.",
+  "requestFramePermissions": []
+}
